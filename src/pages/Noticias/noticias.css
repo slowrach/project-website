@@ -1,0 +1,11 @@
+.main .imgNoticias {
+   width: 40%;
+}
+
+.main h2 {
+  margin: 2rem 0;
+  text-indent: 1rem;
+  font-size: 2rem;
+  color: var(--cor5);
+  background-image: linear-gradient( to right, var(--cor2), transparent);
+}
