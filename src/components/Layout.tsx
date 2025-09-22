@@ -16,27 +16,44 @@ export function Layout(){
       }
    }
 
+   const date = new Date()
+   const year = date.getFullYear()
+   
    return (
       <div>
-        <header className="bg-linear-to-t from-green-500 to-green-300 text-white flex flex-col items-center pb-4 text-shadow-shadow text-shadow-md">
-           <h1 className="uppercase mt-10 text-2xl">Site Guadalupano</h1>
+        <header className="bg-[url(assets/header.png)] bg-no-repeat bg-cover text-white flex flex-col text-shadow-black text-shadow-lg">
+           <h1 className="mt-10 text-[28px] md:text-3xl text-center ">Site Guadalupano</h1>
 
-           <p className="w-90 text-justify my-6 text-sm">Inspirada por São Carlo Acutis, e por meio de sua intercessão, faço este pequeno website como prova de meu amor à minha Doce Mãe e como forma de difundir a história de sua aparição</p>
+           <p className="w-90 text-center mt-3 mb-6 text-md md:text-[20px] leading-6 m-auto text-green-100">Inspirada por São Carlo Acutis, e por meio de sua intercessão, faço este pequeno website como prova de meu amor à minha Doce Mãe e como forma de difundir a história de sua aparição</p>
 
-           <button className="md:hidden" onClick={menu}>
-               <img src={icon} alt="ícone de menu"/>
-            </button>
-
-           {showMenu && <Nav />}
-
-           <Nav className="hidden md:block" />
+           <Nav className="hidden md:flex" />
 
         </header>
 
+        <button className="md:hidden w-full flex justify-center py-2 bg-green-600 border-t border-shadow" onClick={menu}>
+               <img src={icon} alt="ícone de menu"/>
+         </button>
+
+         {showMenu && <Nav className="w-full bg-green-600 text-white flex-col absolute" />}
+
         <Outlet />
 
-         <footer>
-            <p>Site idealizado pelo <strong>Curso em Vídeo</strong> e desenvolvido pela autora.</p>
+         <footer className="flex flex-col bg-green-600 pt-6 pb-3 text-white">
+            <div className="flex justify-center items-center mb-3 md:mb-0">
+               <img src="src/assets/footer.svg" alt="ilustração de flor" className="w-5 mr-1" />
+
+               <p className="text-[25px] text-center">
+                  ¡Viva la Virgen de Guadalupe!
+               </p>
+
+               <img src="src/assets/footer.svg" alt="ilustração de flor" className="w-5 ml-2" />
+            </div>
+
+            <div className="flex justify-between px-3">
+               <span className="text-gray-400 text-xs">Baseado em um projeto do <a href="https://www.cursoemvideo.com/" target="_blank" className="hover:text-white">CursoemVideo</a></span>
+
+               <span className="text-gray-400  text-xs">{year}</span>
+            </div>
          </footer>
     </div>
    )
