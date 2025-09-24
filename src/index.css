@@ -4,9 +4,9 @@
   --default-font-family: "Arial", sans-serif;
   
   --color-shadow: #071A11;
+  --color-green-50: #DCFFE3;
   --color-green-100: #97C9A5;
   --color-green-200: #669173;
-  --color-green-400: #23925e;
   --color-green-500: #1B6139;
   --color-green-600: #14432B;
 }
@@ -19,7 +19,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--color-green-100);
+  background-color: #000;
 }
 
 .main {
@@ -46,6 +46,36 @@ h2 {
 
 }
 
+.main p {
+  text-indent: 2rem;
+  text-align: justify;
+  margin: 1rem 0;
+}
+
+.main span {
+  font-weight: 800;
+}
+
+.image img {
+  box-shadow: 0px 0px 10px #000;
+}
+
+.image span {
+  color: var(--color-gray-500);
+  font-weight: 100;
+  font-size: 0.7rem;
+}
+
+.likes span {
+  color: var(--color-green-500);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.likes div div span {
+  font-size: 1rem;
+}
+
 header p, footer p {
   font-family: "Caveat", cursive;
   font-weight: bold;
@@ -58,5 +88,9 @@ header p, footer p {
 
   .main {
     width: 95vw;
+  }
+
+  .main p {
+    text-indent: 1rem;
   }
 }

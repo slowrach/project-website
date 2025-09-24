@@ -20,7 +20,7 @@ export function Layout(){
    const year = date.getFullYear()
    
    return (
-      <div>
+      <div className="bg-green-100">
         <header className="bg-[url(assets/header.png)] bg-no-repeat bg-cover text-white flex flex-col text-shadow-black text-shadow-lg">
            <h1 className="mt-10 text-[28px] md:text-3xl text-center ">Site Guadalupano</h1>
 
