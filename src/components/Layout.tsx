@@ -26,7 +26,7 @@ export function Layout(){
 
            <p className="w-90 text-center mt-3 mb-6 text-md md:text-[20px] leading-6 m-auto text-green-100">Inspirada por São Carlo Acutis, e por meio de sua intercessão, faço este pequeno website como prova de meu amor à minha Doce Mãe e como forma de difundir a história de sua aparição</p>
 
-           <Nav className="hidden md:flex" />
+           <Nav className="hidden md:flex lg:mt-10" />
 
         </header>
 

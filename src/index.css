@@ -9,6 +9,8 @@
   --color-green-200: #669173;
   --color-green-500: #1B6139;
   --color-green-600: #14432B;
+  
+  --breakpoint-fix: 770px;
 }
 
 #root {
@@ -32,7 +34,7 @@ body {
   border-radius: 0 0 1rem 1rem;
 }
 
-h1, h2 {
+h1, h2, .buttons {
   font-family: "Noto Serif", serif ;
   font-weight: 900;
   text-transform: uppercase;
@@ -52,8 +54,10 @@ h2 {
   margin: 1rem 0;
 }
 
-.main span {
-  font-weight: 800;
+.image {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 .image img {
@@ -61,8 +65,8 @@ h2 {
 }
 
 .image span {
-  color: var(--color-gray-500);
-  font-weight: 100;
+  color: var(--color-gray-400);
+  font-weight: 400;
   font-size: 0.7rem;
 }
 
@@ -81,6 +85,52 @@ header p, footer p {
   font-weight: bold;
 }
 
+h3 {
+  color: var(--color-green-500);
+  font-weight: 700;
+  border-top: 1px solid var(--color-gray-300);
+  padding-top: 0.7rem;
+  margin-top: 2rem;
+}
+
+.ref a {
+  display: flex;
+  gap: 0.2rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  color: var(--color-gray-500);
+  font-size: 0.8rem;
+}
+
+.ref a:hover {
+  color: var(--color-gray-300);
+}
+
+.ref a img {
+  width: 1rem;
+}
+
+.buttons {
+  display: block;
+  margin: auto;
+  background-color: var(--color-green-500);
+  color: var(--color-green-100);
+  text-align: center;
+  padding: 0.5rem;
+  width: 15rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px #000;
+}
+
+.buttons:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: var(--color-green-600);
+  transition: 0.3s;
+}
+
 @media (max-width: 500px) {
   h2 {
     font-size: 1rem;
@@ -92,5 +142,17 @@ header p, footer p {
 
   .main p {
     text-indent: 1rem;
+  }
+}
+
+@media (min-width: 1050px) {
+  .main {
+    width: 70vw;
+  }
+
+  .lgImg {
+    width: 40rem;
+    display: block;
+    margin: auto;
   }
 }

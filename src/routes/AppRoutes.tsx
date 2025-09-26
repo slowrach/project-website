@@ -1,11 +1,11 @@
 import { Route, Routes, BrowserRouter } from "react-router"
 import { Layout } from "../components/Layout"
 import { Home } from "../pages/Home"
-import { Noticias } from "../pages/noticias"
-import { Curiosidades } from "../pages/curiosidades"
-import { Video } from "../pages/video"
-import { Contato } from "../pages/Simbols"
+import { Simbols } from "../pages/Simbols"
+import { Prayers } from "../pages/Prayers"
+import { More } from "../pages/More"
 import { NotFound } from "../pages/notFound"
+
 
 export function AppRoutes(){
    return (
@@ -14,13 +14,11 @@ export function AppRoutes(){
             <Route path="/" element={<Layout />}>
                <Route path="/" index element={<Home />} />
 
-               <Route path="/noticias" element={<Noticias />} />
+               <Route path="/simbolos" element={<Simbols />} />
 
-               <Route path="/curiosidades" element={<Curiosidades />} />
+               <Route path="/oracoes" element={<Prayers />} />
 
-               <Route path="/video" element={<Video />} />
-
-               <Route path="/fale-conosco" element={<Contato />} />
+               <Route path="/mais" element={<More />} />
             </Route>
 
             <Route path="*" element={<NotFound />} />
