@@ -24,7 +24,7 @@ body {
   background-color: #000;
 }
 
-.main {
+main {
   box-shadow: 0px 0px 10px #00000088;
   background-color: #ffffff;
   width: 80vw;
@@ -48,7 +48,7 @@ h2 {
 
 }
 
-.main p {
+main p {
   text-indent: 2rem;
   text-align: justify;
   margin: 1rem 0;
@@ -80,7 +80,7 @@ h2 {
   font-size: 1rem;
 }
 
-header p, footer p {
+header p, footer p, .prayer {
   font-family: "Caveat", cursive;
   font-weight: bold;
 }
@@ -136,18 +136,24 @@ h3 {
     font-size: 1rem;
   }
 
-  .main {
+  main {
     width: 95vw;
   }
 
-  .main p {
+  main p {
     text-indent: 1rem;
   }
 }
 
 @media (min-width: 1050px) {
-  .main {
+  main {
     width: 70vw;
+  }
+
+  .prayer {
+    width: 30rem;
+    text-align: center;
+    margin: 4rem auto;
   }
 
   .lgImg {

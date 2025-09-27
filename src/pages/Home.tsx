@@ -36,7 +36,7 @@ export function Home() {
   const image = sizeScreen > 1200 ? imageLg : imageMd;
 
   return (
-    <div className="main">
+    <main>
       <div className="image lgImg">
         <img
           src={home}
@@ -47,7 +47,7 @@ export function Home() {
         <span>fonte: Filho de Guadalupe</span>
       </div>
 
-      <p>
+      <p className="font-bold">
         Nossa Senhora de Guadalupe, ou Virgem de Guadalupe, é um título mariano
         que surgiu em 1531, no México, quando Nossa Senhora apareceu ao índio
         asteca São Juan Diego.
@@ -114,7 +114,7 @@ export function Home() {
           </div>
 
           <div className="image">
-            <img src={image} alt="figura da aparição de Nossa Senhora" className="lg:w-120" />
+            <img src={image} alt="figura da aparição de Nossa Senhora" className="lg:w-140" />
 
             <span>fonte: Associação Devotos de Fátima</span>
           </div>
@@ -177,6 +177,6 @@ export function Home() {
           <img src={link} alt="Ícone de link externo" />
         </a>
       </div>
-    </div>
+    </main>
   );
 }

@@ -36,7 +36,7 @@ export function Simbols() {
   }
 
   return (
-    <div className="main">
+    <main>
       <p>
         A aparição da imagem de Nossa Senhora de Guadalupe, no manto, não é
         admirável apenas pelo milagre mas, também, porque trouxe consigo vários
@@ -149,6 +149,6 @@ export function Simbols() {
           <img src={link} alt="Ícone de link externo" />
         </a>
       </div>
-    </div>
+    </main>
   );
 }
