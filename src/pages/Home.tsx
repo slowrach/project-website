@@ -3,7 +3,10 @@ import imageMd from "../assets/guadalupe.jpg";
 import imageLg from "../assets/guadalupe-lg.jpg";
 import link from "../assets/link.svg";
 import like from "../assets/like.svg";
+import likedImg from "../assets/liked.png";
 import dislike from "../assets/dislike.svg";
+import dislikedImg from "../assets/disliked.png";
+
 import { useState, useEffect } from "react";
 
 export function Home() {
@@ -11,14 +14,40 @@ export function Home() {
   const [dislikeNum, setDislikeNum] = useState(
     Number(localStorage.getItem("dislikes"))
   );
+  const [liked, setLiked] = useState(false)
+  const [disliked, setDisliked] = useState(false)
 
   const funcLike = () => {
-    setLikeNum(likeNum + 1);
-  };
+    if (liked) {
+      if (likeNum > 0) {
+        setLikeNum(likeNum - 1)
+      } else {
+        setLikeNum(likeNum)
+      }
+    } else {
+      setLikeNum(likeNum + 1)
+    }
+
+    setLiked(!liked)
+  }
+
+  const imgLike = liked ? likedImg : like
 
   const funcDislike = () => {
-    setDislikeNum(dislikeNum + 1);
-  };
+    if (disliked) {
+      if (dislikeNum > 0) {
+        setDislikeNum(dislikeNum - 1)
+      } else {
+        setDislikeNum(dislikeNum)
+      }
+    } else {
+      setDislikeNum(dislikeNum + 1)
+    }
+
+    setDisliked(!disliked)
+  }
+
+  const imgDislike = disliked ? dislikedImg : dislike
 
   useEffect(() => {
     localStorage.setItem("likes", likeNum.toString());
@@ -143,7 +172,7 @@ export function Home() {
           <div className="flex items-center gap-1">
             <button onClick={funcLike}>
               <img
-                src={like}
+                src={imgLike}
                 alt="Ícone de curtir"
                 className="hover:scale-120 hover:cursor-pointer"
               />
@@ -155,7 +184,7 @@ export function Home() {
           <div className="flex items-center gap-1">
             <button onClick={funcDislike}>
               <img
-                src={dislike}
+                src={imgDislike}
                 alt="Ícone de descurtir"
                 className="hover:scale-120 hover:cursor-pointer"
               />
