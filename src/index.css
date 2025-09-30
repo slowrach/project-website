@@ -66,12 +66,10 @@ main p {
 
 .image span {
   color: var(--color-gray-400);
-  font-weight: 400;
   font-size: 0.7rem;
 }
 
 .likes span {
-  color: var(--color-green-500);
   font-weight: 700;
   font-size: 0.9rem;
 }
@@ -145,15 +143,17 @@ h3 {
   }
 }
 
-@media (min-width: 1050px) {
-  main {
-    width: 70vw;
-  }
-
+@media (min-width: 800px) {
   .prayer {
     width: 30rem;
     text-align: center;
     margin: 4rem auto;
+  }
+}
+
+@media (min-width: 1050px) {
+  main {
+    width: 70vw;
   }
 
   .lgImg {

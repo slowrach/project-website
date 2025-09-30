@@ -17,7 +17,7 @@ export function Prayers() {
 
       <p className="prayer text-[20px]">Minha Senhora e minha Rainha, Santíssima Virgem de Guadalupe. Agora que o sol se pôs e o Céu se enche com as estrelas do vosso manto, confio meu descanso às vossas mãos. Apresento diante do nosso Deus o firme propósito de fazer amanhã, o que não fiz hoje ou que poderia fazer melhor. Tira da minha vida o quanto este dia separou-me do seu amor, e o firme propósito de ir ao Sacramento da Confissão para apagar minhas manchas e pecados, sabendo, Minha Senhora, que nada mais os entristece. Sabendo também, Minha Senhora, que nada mais vos alegra do que as boas obras dos vossos filhos, dando sentido a vinda do Senhor no vosso puríssimo ventre. Boa noite, Minha Senhora, Boa e Protetora Mãe, a quem chamamos Guadalupe, a quem se unem o céu e a terra pelas mãos de um anjo do mesmo Deus verdadeiro por quem se vive. Amém!</p>
 
-      <div className="bg-green-50 py-4 px-3 rounded-md">
+      <div className="bg-green-50 pt-1 pb-8 px-3 rounded-md">
          <p>
            Essas e outras orações você encontra no{" "}
            <span className="font-bold text-green-500">

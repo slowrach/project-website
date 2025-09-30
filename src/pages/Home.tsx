@@ -3,9 +3,9 @@ import imageMd from "../assets/guadalupe.jpg";
 import imageLg from "../assets/guadalupe-lg.jpg";
 import link from "../assets/link.svg";
 import like from "../assets/like.svg";
-import likedImg from "../assets/liked.png";
+import likedImg from "../assets/liked.svg";
 import dislike from "../assets/dislike.svg";
-import dislikedImg from "../assets/disliked.png";
+import dislikedImg from "../assets/disliked.svg";
 
 import { useState, useEffect } from "react";
 
@@ -128,7 +128,7 @@ export function Home() {
 
             <p>
               Mesmo assim, no caminho, a Virgem apareceu para ele
-              <strong>(3ª aparição)</strong> e lhe disse sua famosa frase:
+              <strong> (3ª aparição)</strong> e lhe disse sua famosa frase:
               <span className="italic text-green-500 bg-green-50 font-bold">
                 “Não estou eu aqui que sou tua mãe? Tu não estás sob minha
                 sombra e proteção?”
