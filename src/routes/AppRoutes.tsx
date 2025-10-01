@@ -4,7 +4,7 @@ import { Home } from "../pages/Home"
 import { Simbols } from "../pages/Simbols"
 import { Prayers } from "../pages/Prayers"
 import { More } from "../pages/More"
-import { NotFound } from "../pages/notFound"
+import { NotFound } from "../pages/NotFound"
 
 
 export function AppRoutes(){

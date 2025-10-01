@@ -14,45 +14,47 @@ export function Home() {
   const [dislikeNum, setDislikeNum] = useState(
     Number(localStorage.getItem("dislikes"))
   );
-  const [liked, setLiked] = useState(false)
-  const [disliked, setDisliked] = useState(false)
+  const [liked, setLiked] = useState(eval(localStorage.getItem("liked") || 'false'));
+  const [disliked, setDisliked] = useState(eval(localStorage.getItem("disliked") || 'false'));
 
   const funcLike = () => {
     if (liked) {
       if (likeNum > 0) {
-        setLikeNum(likeNum - 1)
+        setLikeNum(likeNum - 1);
       } else {
-        setLikeNum(likeNum)
+        setLikeNum(likeNum);
       }
     } else {
-      setLikeNum(likeNum + 1)
+      setLikeNum(likeNum + 1);
     }
 
-    setLiked(!liked)
-  }
+    setLiked(!liked);
+  };
 
-  const imgLike = liked ? likedImg : like
+  const imgLike = liked ? likedImg : like;
 
   const funcDislike = () => {
     if (disliked) {
       if (dislikeNum > 0) {
-        setDislikeNum(dislikeNum - 1)
+        setDislikeNum(dislikeNum - 1);
       } else {
-        setDislikeNum(dislikeNum)
+        setDislikeNum(dislikeNum);
       }
     } else {
-      setDislikeNum(dislikeNum + 1)
+      setDislikeNum(dislikeNum + 1);
     }
 
-    setDisliked(!disliked)
-  }
+    setDisliked(!disliked);
+  };
 
-  const imgDislike = disliked ? dislikedImg : dislike
+  const imgDislike = disliked ? dislikedImg : dislike;
 
   useEffect(() => {
     localStorage.setItem("likes", likeNum.toString());
     localStorage.setItem("dislikes", dislikeNum.toString());
-  }, [likeNum, dislikeNum]);
+    localStorage.setItem("liked", liked.toString());
+    localStorage.setItem("disliked", disliked.toString());
+  }, [likeNum, dislikeNum, liked, disliked]);
 
   const [sizeScreen, setSizeScreen] = useState(window.innerWidth);
 
@@ -143,7 +145,11 @@ export function Home() {
           </div>
 
           <div className="image">
-            <img src={image} alt="figura da aparição de Nossa Senhora" className="lg:w-140" />
+            <img
+              src={image}
+              alt="figura da aparição de Nossa Senhora"
+              className="lg:w-140"
+            />
 
             <span>fonte: Associação Devotos de Fátima</span>
           </div>
