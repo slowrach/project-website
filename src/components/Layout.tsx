@@ -31,8 +31,9 @@ export function Layout(){
 
         </header>
 
-        <button className="md:hidden w-full flex justify-center py-2 bg-green-600 border-t border-shadow" onClick={menu}>
-               <img src={icon} alt="ícone de menu"/>
+        <button className="md:hidden w-full flex justify-center py-2 bg-green-600 border-t border-shadow uppercase text-white items-center gap-1" onClick={menu}>
+               <img src={icon} alt="ícone de menu" className="w-6"/>
+               Menu
          </button>
 
          {showMenu && <Nav className="w-full bg-green-600 text-white flex-col absolute" />}
