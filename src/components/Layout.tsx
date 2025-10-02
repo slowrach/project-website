@@ -2,6 +2,7 @@ import { Outlet } from "react-router"
 import { useState } from "react"
 import openMenu from "../assets/menu.svg"
 import closeMenu from "../assets/close-menu.svg"
+import footer from "../assets/footer.svg"
 import { Nav } from "./Nav"
 
 export function Layout(){
@@ -40,13 +41,13 @@ export function Layout(){
 
          <footer className="flex flex-col bg-green-600 pt-6 pb-3 text-white">
             <div className="flex justify-center items-center mb-3 md:mb-0">
-               <img src="src/assets/footer.svg" alt="ilustração de flor" className="w-5 mr-1" />
+               <img src={footer} alt="ilustração de flor" className="w-5 mr-1" />
 
                <p className="text-[25px] text-center">
                   ¡Viva la Virgen de Guadalupe!
                </p>
 
-               <img src="src/assets/footer.svg" alt="ilustração de flor" className="w-5 ml-2" />
+               <img src={footer} alt="ilustração de flor" className="w-5 ml-2" />
             </div>
 
             <div className="flex justify-between px-3">
