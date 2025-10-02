@@ -4,10 +4,10 @@ import { Home } from "../pages/Home";
 import { Simbols } from "../pages/Simbols";
 import { Prayers } from "../pages/Prayers";
 import { More } from "../pages/More";
-import { NotFound } from "../pages/NotFound.tsx";
+import { NotFound } from "../pages/404";
 
 export function AppRoutes() {
-  return (
+   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
