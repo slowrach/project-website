@@ -4,7 +4,9 @@ export function NotFound() {
   return (
     <div className="bg-[url(assets/header.png)] bg-no-repeat bg-cover h-[100vh]">
       <main className="h-[90vh]">
-        <h4 className="text-center text-8xl font-bold text-green-200 mt-20">404</h4>
+        <h4 className="text-center text-8xl font-bold text-green-200 mt-20">
+          404
+        </h4>
 
         <h5 className="text-[24px] md:text-6xl text-green-200 mb-20 text-center">
           Página não encontrada!
