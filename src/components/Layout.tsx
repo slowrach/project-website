@@ -25,7 +25,7 @@ export function Layout(){
         <header className="bg-[url(assets/header.png)] bg-no-repeat bg-cover text-white flex flex-col text-shadow-black text-shadow-lg">
            <h1 className="mt-10 text-[28px] md:text-3xl text-center ">Site Guadalupano</h1>
 
-           <p className="w-90 text-center mt-3 mb-6 text-md md:text-[20px] leading-6 m-auto text-green-100">Inspirada por São Carlo Acutis, e por meio de sua intercessão, faço este pequeno website como prova de meu amor à minha Doce Mãe e como forma de difundir a história de sua aparição</p>
+           <p className="w-90 text-center mt-3 mb-6 text-md md:text-[20px] leading-6 m-auto text-white">Inspirada por São Carlo Acutis, e por meio de sua intercessão, faço este pequeno website como prova de meu amor à minha Doce Mãe e como forma de difundir a história de sua aparição</p>
 
            <Nav className="hidden md:flex lg:mt-10" />
 
